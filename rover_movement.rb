@@ -1,9 +1,13 @@
 def turn_rover_left(direction)
-    #return 'W'
-if(direction) == 'N' do
-
-elsif(direction) == 'W' do
+    if(direction) == 'N'
+        return 'W'
+    elsif(direction) == 'W'
     
+    elsif(direction) == 'S'
+
+    elsif(direction) == 'E'
+
+    end
     
 end
 
