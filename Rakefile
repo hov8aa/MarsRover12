@@ -1,12 +1,9 @@
 # Rakefile
 require 'rake'
+require 'rspec/core/rake_task' # Loads RSpec's Rake task
 
-# Define your tasks here
-task :default do
-  puts "This is the default Rake task."
-end
+# Define your RSpec test task
+RSpec::Core::RakeTask.new(:spec)
 
-# Example task
-task :greet do
-  puts "Hello, world!"
-end
+# Default task to run the tests
+task :default => :spec
