@@ -16,6 +16,8 @@ GEM
       rspec-support (~> 3.13.0)
     rspec-support (3.13.1)
 
+bundle lock --add-platform x86_64-linux
+
 PLATFORMS
   x64-mingw-ucrt
 
