@@ -22,6 +22,8 @@ def turn_rover_right(direction)
     end
 end
 
+=begin
 def move_rover_forward(x,y)
     return 'x,y+1'
 end
+=end

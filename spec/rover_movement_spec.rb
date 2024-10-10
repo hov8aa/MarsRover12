@@ -10,9 +10,9 @@ RSpec.describe "Rover Movement Specifications"do
             expect(turn_rover_right('N')).to eq('E')
         end
 
-        it("should validate the new position of the face of the rover, after moving one step forward") do
-            expect(move_rover_forward('x','y')).to eq('x,y+1')
-        end
+    #    it("should validate the new position of the face of the rover, after moving one step forward") do
+    #        expect(move_rover_forward('x','y')).to eq('x,y+1')
+    #    end
     end
 
 =begin
@@ -22,4 +22,5 @@ RSpec.describe "Rover Movement Specifications"do
         end
     end
 =end
+
 end
