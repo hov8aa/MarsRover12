@@ -1,2 +1,2 @@
-Rspec Reports
-    R
+Run rspec to generate documentation
+rspec --format documentation
