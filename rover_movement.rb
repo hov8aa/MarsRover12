@@ -50,20 +50,24 @@ def move_rover_forward_in_all_directions_returning_values(x, y, direction)
     end
 end
 
-def move_rover_to_new_position(x,y,direction,instructions)
+def move_rover_to_new_position(x,y,rover_face,instructions)
     x = x.to_i  # Convert x to an integer
     y = y.to_i  # Convert y to an integer
     i=0
     while i<instructions.length do
         if instructions[i] == 'L'
-            direction = turn_rover_left(direction)
+            rover_face = turn_rover_left(rover_face)
         elsif instructions[i] == 'R'
-            direction = turn_rover_right(direction)
+            rover_face = turn_rover_right(rover_face)
         elsif instructions[i] == 'M'
             #Calculate_New_Position_Of_Rover
-            x, y = move_rover_forward_in_all_directions_returning_values(x,y,direction)
+            x, y = move_rover_forward_in_all_directions_returning_values(x,y,rover_face)
         end
         i = i+1
     end
-return x,y,direction
+return x,y,rover_face
 end
+
+#def move_rover_on_plateau(plateau_x,plateau_y,x,y,rover_face,instructions)
+#    return true
+#end
