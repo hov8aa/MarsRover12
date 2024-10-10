@@ -20,5 +20,5 @@ RSpec.describe "Rover Movement Specifications"do
             expect('LMLMLMLMM').to eq('N')
         end
     end
-    
+
 end
