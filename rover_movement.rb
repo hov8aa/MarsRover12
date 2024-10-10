@@ -25,3 +25,17 @@ end
 def move_rover_forward(x,y)
     return 'x,y+1'
 end
+
+def move_rover_forward_in_all_directions(x,y,direction)
+    #return 'x,y+1'
+    #expanading on move_rover_forward
+    if(direction) == 'N'
+        return 'x,y+1'
+    elsif(direction) == 'E'
+        return 'x,y-1'
+    elsif(direction) == 'S'
+        return 'x-1,y'
+    elsif(direction) == 'W'
+        return 'x+1,y'
+    end
+end
