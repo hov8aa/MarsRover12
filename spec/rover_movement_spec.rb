@@ -23,7 +23,11 @@ RSpec.describe "Rover Movement Specifications"do
 
     context"to verify if the rover moves as expected in the right directions when there are a series of instructions"do
         it("should validate the final new rover facing direction") do
-            expect(move_rover_to_new_position('1','2','N','LMLMLMLMM')).to eq('N')
+            expect(move_rover_to_new_position('1','2','N','LMLMLMLMM')).to eq([1,3,'N'])
+        end
+
+        it("should validate the final new rover facing direction") do
+            expect(move_rover_to_new_position('3','3','E','MMRMMRMRRM')).to eq([5,1,'E'])
         end
     end
 end
