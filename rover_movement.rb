@@ -71,27 +71,31 @@ end
 def move_rover_on_plateau(plateau_x,plateau_y,x,y,rover_face,instructions)
     status=nil
     x, y, rover_face = move_rover_to_new_position(x,y,rover_face,instructions)
-
-    #DRAFT LOGIC
-    #How to find out if the new rover position is on the given square plateau or not
+    plateau_x = plateau_x.to_i
+    plateau_y = plateau_y.to_i
+#DRAFT LOGIC #How to find out if the new rover position is on the given square plateau or not
 =begin
 For example, plateau is : 5, 5
-
 Rover positions on plateau:
     3,5     5,5     4,5     
     0,1     0,0     5,0     0,5
-So, in this particular case, 
-Any both the coordinates of final rover position are equal to or less then given maximum coordinates
-OR NOT Negative, 
-Than the rover is always on the given  plateau
+    So, in this particular case, 
+    If both the coordinates of final rover position are equal to or less then given maximum coordinates
+    OR NOT Negative, 
+    Than the rover is always on the given  plateau
 
 Rover positions outside plateau:
     5,6     6,5     6,6
     -1,0    0,-1    -1,-1
-So, in this particular case, 
-Any either of the coordinates of final rover position are more than given maximum coordinates
-OR not negative,
-are always on the given plateau
-Than the rover is always outside the given  plateau
+    So, in this particular case, 
+    Any either of the coordinates of final rover position are more than given maximum coordinates
+    OR not negative,
+    are always on the given plateau
+    Than the rover is always outside the given  plateau
 =end
+    if ( x <= plateau_x && y <= plateau_y && x >= 0 && y >= 0)
+        return true
+    elsif (x > plateau_x || y > plateau_y || x < 0 || y < 0)
+        return false
+    end
 end

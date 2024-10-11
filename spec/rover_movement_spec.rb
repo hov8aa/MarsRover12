@@ -35,5 +35,9 @@ RSpec.describe "Rover Movement Specifications"do
         it("should find out final position after movement and raise error if it went out of plateau") do
             expect(move_rover_on_plateau('5','5','3','3','E','MMRMMRMRRM')).to be(true)
         end
+
+        it("should find out final position after movement and raise error if it went out of plateau") do
+            expect(move_rover_on_plateau('5','5','3','3','E','MMRMMRMRRMMMMMMMMMMM')).to be(false)
+        end
     end
 end
